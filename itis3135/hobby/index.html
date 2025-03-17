@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Golf Hobby Site</title>
+    <style>
+        body {
+            font-family: Geneva, sans-serif;
+            background-color: #e5f0d6;
+            color: #333;
+            margin: auto;
+            padding: auto;
+        }
+        p {
+            font-family: Geneva, sans-serif;
+            font-size: 15px;
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: justify;
+        }
+
+        header {
+            background-color: #2e7d32;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        img {
+            width: 400px;
+            height: auto;
+            }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            background-color: #4caf50;
+            padding: 0.5rem;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        main {
+            padding: 10px;
+            text-align: center;
+        }
+        section {
+            display: none;
+        }
+        
+        footer {
+            background-color: #2e7d32;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+        .history-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 800px;
+            margin: 20px auto;
+            flex-wrap: wrap;
+        }
+
+        .history-text {
+            flex: 1;
+            text-align: left;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        .history-image {
+            flex: 1;
+            text-align: center;
+            margin: 10px;
+        }
+
+        .history-image img {
+            max-width: 100%;
+            height: auto;
+            max-width: 200px;
+        }
+        .time-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 800px;
+            margin: 20px auto;
+            flex-wrap: wrap;  
+        }
+
+        .time-text {
+            flex: 1;
+            text-align: left;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        .time-image {
+            flex: 1;
+            text-align: center;
+            margin: 10px;
+        }
+
+        .time-image img {
+            max-width: 100%;
+            height: auto;
+            max-width: 300px; 
+        }
+        .location-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 800px;
+            margin: 20px auto;
+            flex-wrap: wrap;
+        }
+
+        .location-text {
+            flex: 1;
+            text-align: left;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        .location-image {
+            flex: 1;
+            text-align: center;
+            margin: 10px;
+        }
+
+        .location-image img {
+            max-width: 100%;
+            height: auto;
+            max-width: 400px;
+        }
+        .how-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 800px;
+            margin: 20px auto;
+            flex-wrap: wrap;
+        }
+
+        .how-text {
+            flex: 1;
+            text-align: left;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        .how-image {
+            flex: 1;
+            text-align: center;
+            margin: 10px;
+        }
+
+        .how-image img {
+            max-width: 100%;
+            height: auto;
+            max-width: 275px;
+        }
+        .why-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 800px;
+            margin: 20px auto;
+            flex-wrap: wrap;
+        }
+
+        .why-text {
+            flex: 1;
+            text-align: left;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        .why-image {
+            flex: 1;
+            text-align: center;
+            margin: 10px;
+        }
+
+        .why-image img {
+            max-width: 100%;
+            height: auto;
+            max-width: 350px;
+        }
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+            margin-left: 75px; 
+            text-align: left;
+            font-size: 20px;
+        }
+
+    </style>
+    <script>
+        function showSection(sectionId){
+            document.querySelectorAll("main section").forEach((section) => {
+                section.style.display = "none";
+            });
+            document.getElementById(sectionId).style.display = "block";
+        }
+        document.addEventListener("DOMContentLoaded", function(){
+            showSection("home");
+        });
+    </script>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <h1>Golf: A Passion for the Green</h1>
+        <nav>
+            <a href="#" onclick="showSection('home')">Home</a> |
+            <a href="#" onclick="showSection('about')">My Golf History</a> |
+            <a href="#" onclick="showSection('when')">Best Times</a> |
+            <a href="#" onclick="showSection('where')">Best Locations</a> |
+            <a href="#" onclick="showSection('how')">How to Play</a> |
+            <a href="#" onclick="showSection('why')">Why Golf?</a> |
+            <a href="#" onclick="showSection('prompts')">AI Prompts</a> 
+        </nav>
+    </header>
+    
+    <main>
+        <section id="home" class="active">
+            <h2>What is Golf?</h2>
+            <p style="max-width: 800px; text-align: left; margin: 0 auto;">Golf is a precision sport where players aim to hit a ball into a series of holes with as few strokes as possible. It is played on a carefully designed course that features a variety of obstacles, such as sand traps, water hazards, and rolling terrains, which challenge players to use strategy and skill. Each hole has a designated par, and golfers must navigate the course using different clubs to adjust for distance, accuracy, and course conditions. Beyond physical ability, golf requires patience, mental focus, and strategic decision-making to achieve the best possible score.</p>
+            <figure>
+                <img src="images/golfmain.jpg" alt="Golf Course">
+                <figcaption><em>A golf ball about to drop in the hole.</em></figcaption>
+            </figure>
+        </section>
+        
+        <section id="about">
+            <h2>My Golf History</h2>
+
+            <div class="history-container">
+                <div class="history-text">
+                    <p>My name is Caleb, and I have been passionate about golf for a couple of years now. I love the strategy and skill involved.</p>
+                </div>
+                <figure class="history-image">
+                    <img src="images/megolf.jpg" alt="Me about to hit a golf ball.">
+                    <figcaption><em>Me about to take a swing.</em></figcaption>
+                </figure>
+            </div>
+            <div class="history-container">
+                <div class="history-text">
+                    <p><strong>Most Memorable Moment:</strong> My first time ever playing, I chipped in for par on a hole. It was an unforgettable experience!</p>
+                </div>
+                <figure class="history-image">
+                    <img src="images/memorablemoment.jpg" alt="Memorable Moment">
+                    <figcaption><em>Chipping in for par during my first round.</em></figcaption>
+                </figure>
+            </div>
+            <div class="history-container">
+                <div class="history-text">
+                    <p><strong>Current Goal:</strong> My goal is to break 90 strokes and improve my overall game.</p>
+                </div>
+                <figure class="history-image">
+                    <img src="images/currentgoal.jpg" alt="Current Goal">
+                    <figcaption><em>Working on breaking 90!</em></figcaption>
+                </figure>
+            </div>        
+        </section>
+        
+        
+        <section id="when">
+            <h2>Best Times to Play</h2>
+            <div class="time-container">
+                <div class="time-text">
+                    <h3>Spring/Fall</h3>
+                    <p>The best times to play are during the Spring and Fall. The weather is moderate, offering cool temperatures and less humidity. It’s perfect for a comfortable round of golf with less crowding.</p>
+                </div>
+                <figure class="time-image">
+                    <img src="images/springfall.jpg" alt="Spring/Fall Golf">
+                    <figcaption><em>Ideal conditions in Spring and Fall.</em></figcaption>
+                </figure>
+            </div>
+            <div class="time-container">
+                <div class="time-text">
+                    <h3>Summer</h3>
+                    <p>Summer is the peak season for golf. The weather is warm, and you have the longest days to enjoy the course. It's the best time to play if you want to maximize your time on the course.</p>
+                </div>
+                <figure class="time-image">
+                    <img src="images/summer.jpg" alt="Summer Golf">
+                    <figcaption><em>Long days for summer golfing.</em></figcaption>
+                </figure>
+            </div>
+            <div class="time-container">
+                <div class="time-text">
+                    <h3>Winter</h3>
+                    <p>Winter is the most challenging season to play, with cold temperatures and potential for snow or frost. However, if you enjoy a more quiet and isolated round, winter golfing can be rewarding.</p>
+                </div>
+                <figure class="time-image">
+                    <img src="images/winter.jpg" alt="Winter Golf">
+                    <figcaption><em>Challenging conditions in winter.</em></figcaption>
+                </figure>
+            </div>
+        </section>
+        
+        <section id="where">
+            <h2>Best Locations</h2>
+
+            <div class="location-container">
+                <div class="location-text">
+                    <h3>Augusta National</h3>
+                    <p>Located in Georgia, USA, Augusta National is one of the most prestigious golf courses in the world, known for hosting the Masters Tournament each year. Its beautifully manicured fairways and signature holes make it a must-visit for any golf enthusiast.</p>
+                </div>
+                <figure class="location-image">
+                    <img src="images/augusta.jpg" alt="Augusta National Golf Course">
+                    <figcaption><em>Augusta National Golf Course</em></figcaption>
+                </figure>
+            </div>
+            <div class="location-container">
+                <div class="location-text">
+                    <h3>Pebble Beach</h3>
+                    <p>Pebble Beach, located in California, is a scenic gem that offers stunning views of the Pacific Ocean. It is famous for its challenging holes along the coastline and has been the venue for several U.S. Open championships.</p>
+                </div>
+                <figure class="location-image">
+                    <img src="images/pebblebeach.jpg" alt="Pebble Beach Golf Course">
+                    <figcaption><em>Pebble Beach Golf Course</em></figcaption>
+                </figure>
+            </div>
+            <div class="location-container">
+                <div class="location-text">
+                    <h3>St. Andrews</h3>
+                    <p>Known as the "Home of Golf," St. Andrews in Scotland is one of the oldest and most iconic golf courses in the world. With a rich history and challenging layout, it offers a unique golfing experience like no other.</p>
+                </div>
+                <figure class="location-image">
+                    <img src="images/standrews.jpg" alt="St. Andrews Golf Course">
+                    <figcaption><em>St. Andrews Golf Course</em></figcaption>
+                </figure>
+            </div>
+        </section>
+        
+        <section id="how">
+            <h2>How to Play Golf</h2>
+            
+            <div class="how-container">
+                <div class="how-text">
+                    <h3>Equipment</h3>
+                    <p>To play golf, you'll need essential equipment, including a set of clubs, golf balls, tees, and proper golf attire. Different clubs serve different purposes, such as drivers for long-distance shots and putters for finishing on the green.</p>
+                </div>
+                <figure class="how-image">
+                    <img src="images/equipment.jpg" alt="Golf Equipment">
+                    <figcaption><em>Golf clubs, balls, and other essential gear</em></figcaption>
+                </figure>
+            </div>
+            <div class="how-container">
+                <div class="how-text">
+                    <h3>Swing Mechanics</h3>
+                    <p>A proper golf swing involves grip, stance, and body rotation. The backswing, downswing, and follow-through must be smooth and controlled to generate power and accuracy. Practicing regularly helps build muscle memory.</p>
+                </div>
+                <figure class="how-image">
+                    <img src="images/swing.jpg" alt="Golf Swing Mechanics">
+                    <figcaption><em>Perfecting your golf swing is essential for success</em></figcaption>
+                </figure>
+            </div>
+            <div class="how-container">
+                <div class="how-text">
+                    <h3>Strategy & Course Management</h3>
+                    <p>Understanding the layout of a course and planning each shot is crucial for scoring well. Factors such as wind, hazards, and club selection play a big role. Learning when to play aggressively or conservatively can make a difference in your game.</p>
+                </div>
+                <figure class="how-image">
+                    <img src="images/course-strategy.jpg" alt="Golf Course Strategy">
+                    <figcaption><em>Planning shots wisely improves performance</em></figcaption>
+                </figure>
+            </div>
+
+        </section>
+        
+        <section id="why">
+            <h2>Why Play Golf?</h2>
+        
+            <div class="why-container">
+                <div class="why-text">
+                    <h3>Stress Relief</h3>
+                    <p>Golf is a great way to escape from daily stress and enjoy peaceful surroundings. The open spaces, fresh air, and focus required for the game can help clear your mind and provide a mental reset.</p>
+                </div>
+                <figure class="why-image">
+                    <img src="images/stress-relief.jpg" alt="Relaxing golf course">
+                    <figcaption><em>Golf courses offer a peaceful escape</em></figcaption>
+                </figure>
+            </div>
+        
+            <div class="why-container">
+                <div class="why-text">
+                    <h3>Social Benefits</h3>
+                    <p>Golf is a great way to bond with friends, family, or even business colleagues. Whether it's a casual weekend round or a corporate outing, golf brings people together in a fun and competitive environment.</p>
+                </div>
+                <figure class="why-image">
+                    <img src="images/social.jpg" alt="Group of golfers enjoying a round">
+                    <figcaption><em>Golf fosters friendships and connections</em></figcaption>
+                </figure>
+            </div>
+        
+            <div class="why-container">
+                <div class="why-text">
+                    <h3>Physical & Mental Benefits</h3>
+                    <p>Walking the course provides good exercise, and the strategic nature of the game keeps your mind sharp. Golf improves coordination, patience, and problem-solving skills, making it a great all-around activity.</p>
+                </div>
+                <figure class="why-image">
+                    <img src="images/fitness.jpg" alt="Golfer walking on a course">
+                    <figcaption><em>Golf is both mentally and physically rewarding</em></figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section id="prompts">
+            <h2>ChatGPT Prompts</h2>
+            <ul>
+                <li>Copied and pasted the assignment instructions and asked it to break it down into easy steps</li>
+                <li>Asked it to give me a cool and easy to read golf based color scheme for the CSS</li>
+                <li>Also gave it the rubric to break that down and how to accomplish everything on it</li>
+                <li>Asked it for kind've a backbone or a basic structure for my base html file</li>
+                <li>It gave me the idea to do my most memorable moment and to do my goal</li>
+                <li>I asked it for ideas about images to use - it didn't give me the greatest ideas</li>
+            </ul>
+        </section>
+        
+        
+    </main>
+    <footer>
+        <p>Designed by <a href="https://webpages.charlotte.edu/cearnha8/designfirm/index.html">Earnhardt Enterprises</a>, Certified in <a href="https://www.freecodecamp.org/certification/CalebEarnhardt/responsive-web-design">Responsive Web Design</a> ©2025</p>
+    </footer>
+</body>
+</html>
