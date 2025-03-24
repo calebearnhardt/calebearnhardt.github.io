@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whimsical Company - Employee Tables</title>
+    <link rel="stylesheet" href="styles/default.css">
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: darkgray;
+        }
+        tr:nth-child(even){
+            background-color: #f2f2f2;
+        }
+        tr:nth-child(odd){
+            background-color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div data-include="components/header.html"></div>
+    </header>
+    <main>
+        <h2>Activity 2 - HTML Tables</h2>
+        <h3>My Table Data</h3>
+        <ol>
+            <li>John Doe - johndoe@gmail.com - 5</li>
+            <li>Peter Griffin - peterg@gmail.com - 15</li>
+            <li>Jimmy Smith - jsmitty@gmail.com - 7</li>
+            <li>Rigby Raccoon - rigby@gmail.com - 6</li>
+            <li>Bob Johnson - bob.j@gmail.com - 3</li>
+            <li>Alice Brown - aliceb@gmail.com - 8</li>
+            <li>Charlie Brown - charlieb@gmail.com - 15</li>
+        </ol>
+        <h3>Employee Data in Simple Table</h3>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Years of Service</th>
+            </tr>
+            <tr>
+                <td>John Doe</td>
+                <td>johndoe@gmail.com</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>Peter Griffin</td>
+                <td>peterg@gmail.com</td>
+                <td>7</td>
+            </tr>
+            <tr>
+                <td>Jimmy Smith</td>
+                <td>jsmitty@gmail.com</td>
+                <td>7</td>
+            </tr>
+            <tr>
+                <td>Rigby Raccoon</td>
+                <td>rigby@gmail.com</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td>Bob Johnson</td>
+                <td>bob.j@gmail.com</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>Alice Brown</td>
+                <td>aliceb@gmail.com</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>Charlie Brown</td>
+                <td>charlieb@gmail.com</td>
+                <td>15</td>
+            </tr>
+        </table>
+        <h3>Employee Data in Complex Table</h3>
+        <table>
+            <caption>Employee Information</caption>
+            <tr>
+                <th id="category">Category</th>
+                <th id="name">Name</th>
+                <th id="email">Email</th>
+                <th id="years">Years of Service</th>
+                <th id="salary">Monthly Salary</th>
+            </tr>
+            <tr>
+                <td rowspan="2" headers="category">Management</td>
+                <td headers="name">John Doe</td>
+                <td headers="email">johndoe@gmail.com</td>
+                <td headers="years">5</td>
+                <td headers="salary">$5,000</td>
+            </tr>
+            <tr>
+                <td headers="name">Peter Griffin</td>
+                <td headers="email">peterg@gmail.com</td>
+                <td headers="years">7</td>
+                <td headers="salary">$6,500</td>
+            </tr>
+            <tr>
+                <td rowspan="3" headers="category">Back of House</td>
+                <td headers="name">Jimmy Smith</td>
+                <td headers="email">jsmitty@gmail.com</td>
+                <td headers="years">7</td>
+                <td headers="salary">$4,200</td>
+            </tr>
+            <tr>
+                <td headers="name">Rigby Raccoon</td>
+                <td headers="email">rigby@gmail.com</td>
+                <td headers="years">6</td>
+                <td headers="salary">$4,000</td>
+            </tr>
+            <tr>
+                <td headers="name">Bob Johnson</td>
+                <td headers="email">bob.j@gmail.com</td>
+                <td headers="years">3</td>
+                <td headers="salary">$4,200</td>
+            </tr>
+            <tr>
+                <td rowspan="2" headers="category">Front of House</td>
+                <td headers="name">Alice Brown</td>
+                <td headers="email">aliceb@gmail.com</td>
+                <td headers="years">8</td>
+                <td headers="salary">$4,800</td>
+            </tr>
+            <tr>
+                <td headers="name">Charlie Brown</td>
+                <td headers="email">charlieb@gmail.com</td>
+                <td headers="years">15</td>
+                <td headers="salary">$5,300</td>
+            </tr>
+            <tr>
+                <th colspan="3">Total Years of Service / Total Monthly Salary</th>
+                <td>51</td>
+                <td>$34,000</td>
+            </tr>
+        </table>
+    </main>
+    <footer>
+        <div data-include="components/footer.html"></div>
+    </footer>
+    <script src="scripts/HTMLInclude.min.js"></script>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</body>
+</html>
