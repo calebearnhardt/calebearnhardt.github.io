@@ -1,0 +1,170 @@
+/* css/style.css */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #333;
+  }
+  
+  header {
+    background: linear-gradient(to right, #1e1e1e, #2f2f2f);
+    color: white;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    border-bottom: 5px solid #c8102e; /* red stripe for barbershop pole */
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    background-color: #0f0f0f;
+    margin: 0;
+  }
+  
+  .navbar li {
+    margin: 0 1.2rem;
+  }
+  
+  .navbar a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 0.75rem;
+    display: block;
+    transition: background 0.3s ease;
+  }
+  
+  .navbar a:hover {
+    background-color: #c8102e;
+    color: white;
+  }
+  
+  main {
+    padding: 2rem;
+    max-width: 960px;
+    margin: auto;
+    background-color: #f9f9f9;
+    border-left: 4px solid #001f5b; /* blue stripe */
+    border-right: 4px solid #c8102e; /* red stripe */
+  }
+  
+  h1 {
+    font-family: 'Georgia', serif;
+  }
+  
+  h2, h3 {
+    font-family: 'Georgia', serif;
+    color: #001f5b; /* deep navy */
+  }
+  
+  footer {
+    background-color: #1e1e1e;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    border-top: 5px solid #001f5b; /* blue stripe */
+    margin-top: 2rem;
+  }
+
+  .toddimage {
+    max-width: 250px;
+    display: block;
+    margin: 1rem auto;
+  }
+  
+  .logo {
+    max-width: 250px;
+    display: block;
+    height: auto;
+    flex-shrink: 0;
+  }
+
+  .home-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: auto;
+    padding: 1rem;
+    background-color: #fff;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+  }
+  
+  form label {
+    font-weight: bold;
+    margin-bottom: 0.3rem;
+  }
+  
+  form input, form textarea {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid #999;
+    font-size: 1rem;
+  }
+  
+  form button {
+    background-color: #c8102e;
+    color: white;
+    border: none;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  form button:hover {
+    background-color: #a00b23;
+  }
+  
+  figure {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  figure img {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  figcaption {
+    margin-top: 0.5rem;
+    font-style: italic;
+    color: #555;
+  }
+
+  .services-content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .services-text {
+    flex: 1;
+    min-width: 250px;
+  }
+  
+  .services-image {
+    max-width: 300px;
+    height: auto;
+    flex-shrink: 0;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  
