@@ -7,18 +7,8 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header>
-    <h1>Mocksville Barbershop</h1>
-    <nav>
-      <ul class="navbar">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="contact.html">Contact/Schedule</a></li>
-      </ul>
-    </nav>
-  </header>
+  <div data-include="components/header.html"></div>
+
   <main>
     <div class="home-content">
       <div class="home-text">
@@ -29,11 +19,9 @@
       <img src="imgs/mblogo.jpg" alt="Mocksville Barbershop Logo" class="logo">
     </div>
   </main>
-  
-  <footer>
-    <p>Contact: toddearnhardt@yahoo.com | (336) 469-6401</p>
-    <p>68 Court Square, Mocksville, NC</p>
-    <p>Page designed by <a href="https://webpages.charlotte.edu/cearnha8/designfirm/index.html" style="color: white;">Earnhardt Enterprises</a> Certified in <a href="https://www.freecodecamp.org/certification/CalebEarnhardt/responsive-web-design" style="color: white;">Responsive Web Design</a> &copy;2025</p>
-  </footer>
+
+  <div data-include="components/footer.html"></div>
+
+  <script src="js/HTMLInclude.min.js"></script>
 </body>
 </html>
